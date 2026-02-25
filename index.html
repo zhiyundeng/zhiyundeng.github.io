@@ -9,7 +9,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <style>
+      .profile-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .profile-img {
+        width: 100%;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .profile-container:hover .hover-img {
+        opacity: 1;
+      }
+    </style>
   </head>
 
   <body>
@@ -38,7 +62,10 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/personal/zdeng_GTA.JPG"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/personal/zdeng_GTA.JPG" class="hoverZoomLink"></a>
+                <div class="profile-container">
+                  <img src="images/personal/zdeng.png" class="profile-img default-img" alt="profile photo">
+                  <img src="images/personal/zdeng_GTA.JPG" class="profile-img hover-img" alt="profile hover photo">
+                </div>
               </td>
             </tr>
           </tbody></table>
