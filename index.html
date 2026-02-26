@@ -160,6 +160,69 @@
               </tbody>
             </table>
 
+            <!-- Posters Section -->
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle">
+                    <h2>Posters</h2>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                
+                <!-- Poster Item 1 -->
+                <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle">
+                    <img src="pdf/poster/Poster_IROS2023.png" class="poster-img" alt="IROS 2023 Poster" onclick="openModal(this.src)" width="100%">
+                    <p style="text-align:center; margin-top:8px;">
+                      <strong>V2X-lead: LiDAR-based end-to-end autonomous driving</strong><br>
+                      IROS 2023
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Poster Item 2 -->
+                <!-- <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle">
+                    <img src="pdf/poster/Poster_WACV2026.png" class="poster-img" alt="WACV 2026 Poster" onclick="openModal(this.src)" width="100%">
+                    <p style="text-align:center; margin-top:8px;">
+                      <strong>AirLock+: Scaling UAV-to-Satellite Image Registration</strong><br>
+                      WACV 2026
+                    </p>
+                  </td>
+                </tr> -->
+
+                <!-- Add more posters here -->
+
+              </tbody>
+            </table>
+
+            <!-- Modal for full-size poster viewing -->
+            <div id="posterModal" class="modal" onclick="closeModal()">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="modalImg">
+            </div>
+
+            <script>
+              function openModal(src) {
+                document.getElementById('posterModal').style.display = 'block';
+                document.getElementById('modalImg').src = src;
+              }
+
+              function closeModal() {
+                document.getElementById('posterModal').style.display = 'none';
+              }
+
+              document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                  closeModal();
+                }
+              });
+            </script>
+
             <!-- Publications Section -->
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
@@ -185,17 +248,6 @@
               <tbody>
 
                 <!-- Publication in Area 1 -->
-                
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle">
-                    <img src="pdf/poster/Poster_WACV2026.png" class="poster-img" alt="WACV 2026 Poster" onclick="openModal(this.src)" width="100%">
-                    <p style="text-align:center; margin-top:8px;">
-                      <strong>AirLock+: Scaling UAV-to-Satellite Image Registration</strong><br>
-                      WACV 2026
-                    </p>
-                  </td>
-                </tr>
-
                 <tr>
                   <td style="padding:16px;width:25%;vertical-align:middle">
                     <img src="images/publications/WACV2026.png" width="100%">
@@ -288,17 +340,6 @@
               <tbody>
 
                 <!-- Publication in Area 2 -->
-                
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle">
-                    <img src="pdf/poster/Poster_IROS2023.png" class="poster-img" alt="IROS 2023 Poster" onclick="openModal(this.src)" width="100%">
-                    <p style="text-align:center; margin-top:8px;">
-                      <strong>V2X-lead: LiDAR-based end-to-end autonomous driving</strong><br>
-                      IROS 2023
-                    </p>
-                  </td>
-                </tr>
-
                 <tr>
                   <td style="padding:16px;width:25%;vertical-align:middle">
                     <img src="images/publications/Poster_IROS2023_thumbnail.png" width="100%">
@@ -468,68 +509,7 @@
               </tbody>
             </table>
 
-            <!-- Posters Section -->
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle">
-                    <h2>Posters</h2>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-                
-                <!-- Poster Item 1 -->
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle">
-                    <img src="pdf/poster/Poster_IROS2023.png" class="poster-img" alt="IROS 2023 Poster" onclick="openModal(this.src)" width="100%">
-                    <p style="text-align:center; margin-top:8px;">
-                      <strong>V2X-lead: LiDAR-based end-to-end autonomous driving</strong><br>
-                      IROS 2023
-                    </p>
-                  </td>
-                </tr>
 
-                <!-- Poster Item 2 -->
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle">
-                    <img src="pdf/poster/Poster_WACV2026.png" class="poster-img" alt="WACV 2026 Poster" onclick="openModal(this.src)" width="100%">
-                    <p style="text-align:center; margin-top:8px;">
-                      <strong>AirLock+: Scaling UAV-to-Satellite Image Registration</strong><br>
-                      WACV 2026
-                    </p>
-                  </td>
-                </tr>
-
-                <!-- Add more posters here -->
-
-              </tbody>
-            </table>
-
-            <!-- Modal for full-size poster viewing -->
-            <div id="posterModal" class="modal" onclick="closeModal()">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="modalImg">
-            </div>
-
-            <script>
-              function openModal(src) {
-                document.getElementById('posterModal').style.display = 'block';
-                document.getElementById('modalImg').src = src;
-              }
-
-              function closeModal() {
-                document.getElementById('posterModal').style.display = 'none';
-              }
-
-              document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                  closeModal();
-                }
-              });
-            </script>
 
             <!-- Honors & Awards Section -->
             <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
